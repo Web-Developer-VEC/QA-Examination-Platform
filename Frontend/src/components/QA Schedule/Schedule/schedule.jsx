@@ -480,6 +480,27 @@ const Schedule = () => {
               View Scheduled Exams
               <span className="text-base">→</span>
             </button>
+            <button
+              onClick={() => navigate("/questionBank")}
+              className="
+              inline-flex items-center gap-2
+              px-4 py-2
+              rounded-lg
+              border border-[#800000]/30
+              bg-white
+              text-[#800000]
+              text-sm font-medium
+              shadow-sm
+              hover:bg-[#800000]
+              hover:text-prim
+              hover:border-[#800000]
+              transition-all duration-200
+              focus:outline-none focus:ring-2 focus:ring-[#800000]/30
+            "
+            >
+              Download
+              <span className="text-base">→</span>
+            </button>
           </div>
           <button
             className="qa-logout-btn !hidden md:!flex"
