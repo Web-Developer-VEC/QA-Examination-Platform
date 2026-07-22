@@ -48,6 +48,9 @@ const UserPauseExam = React.lazy(() =>
 const StaffPage = React.lazy(() =>
   import("./components/Staff/StaffPage")
 );
+const QuestionBank = React.lazy(() =>
+  import("./components/QA Schedule/questionBank.jsx")
+);
 
 const GlobalStyle = createGlobalStyle`
     /* Global Cursor Style */
@@ -220,6 +223,11 @@ const App = () => {
               <Route path="/qasession" element={
                 <ProtectedRoute roles={['admin', 'staff']}>
                   <StaffPage />
+                </ProtectedRoute>
+              } />
+                 <Route path="/questionBank" element={
+                <ProtectedRoute roles={['admin', 'staff']}>
+                  <QuestionBank />
                 </ProtectedRoute>
               } />
             </Routes>

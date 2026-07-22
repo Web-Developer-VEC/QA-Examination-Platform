@@ -13,7 +13,7 @@ const { addSubject, deleteSubject} = require("../controllers/staff_controllers/s
 const { handleBatchStudent, addStudent } = require("../controllers/staff_controllers/student_handle_controller");
 const { deleteHandleForm, addHandleForm } = require('../controllers/staff_controllers/form_handle_controller');
 const { existingBatch, getStudentsdetails } = require('../controllers/form_controllers/getexistingbatch_controller');
-
+const {getSubjectList, downloadQuestionBank} = require("../controllers/staff_controllers/question_download_controller")
 
 // ===========================
 // EXAM SCHEDULE (ADMIN)
@@ -72,7 +72,7 @@ router.get("/exam/active-sessions", allowRoles("admin", "staff"), getActiveSessi
 router.post("/questions/upload", allowRoles("admin"), uploadQuestion);
 router.delete("/topics", allowRoles("admin"), deleteQuestion);
 router.get("/questions/subjects", allowRoles("admin"), getSubject);
-
+router.post("/questions/questionbank", allowRoles("admin"), downloadQuestionBank);
 
 
 
