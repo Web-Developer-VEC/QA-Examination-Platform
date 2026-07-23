@@ -9,7 +9,7 @@ const QuestionBank = () => {
     const navigate = useNavigate();
 
     const [subjects, setSubjects] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loadingSubject, setLoadingSubject] = useState(null);;
 
     const session = JSON.parse(sessionStorage.getItem("userSession"));
 
@@ -39,7 +39,7 @@ const QuestionBank = () => {
 
     const handleDownload = async (subjectName) => {
         try {
-            setLoading(true);
+             setLoadingSubject(subjectName);
 
             const response = await axios.post(
                 "/api/main-backend/examiner/questions/questionbank",
@@ -75,7 +75,9 @@ const QuestionBank = () => {
                 text: "Unable to download question bank.",
             });
         } finally {
-            setLoading(false);
+             setTimeout(() => {
+        setLoadingSubject(null);
+    }, 100);
         }
     };
 
@@ -182,7 +184,7 @@ const QuestionBank = () => {
                                                         onClick={() =>
                                                             handleDownload(subject.subject_name)
                                                         }
-                                                        disabled={loading}
+                                                        disabled={loadingSubject === subject.subject_name}
                                                         className="
                         inline-flex
                         items-center
