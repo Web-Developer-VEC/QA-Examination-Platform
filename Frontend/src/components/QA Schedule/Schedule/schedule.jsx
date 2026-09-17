@@ -19,7 +19,7 @@ import {
   SearchableInput,
 } from "./searchableInput";
 import Banner from "../../Banner";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "axios";
 

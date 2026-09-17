@@ -39,6 +39,7 @@
     "lucide-react": "^0.562.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-router": "^8.4.0",
     "react-router-dom": "^7.12.0",
     "styled-components": "^6.3.5",
     "sweetalert2": "^11.26.17",

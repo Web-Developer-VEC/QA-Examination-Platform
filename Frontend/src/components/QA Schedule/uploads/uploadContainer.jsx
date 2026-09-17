@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 import QuestionUploadPage from "./questionUpload";
 import StudentBatchUploadPage from "./studentBatchUpload";
 import Banner from "../../Banner";
@@ -7,7 +7,7 @@ import Banner from "../../Banner";
 const UploadContainer = () => {
   const location = useLocation();
 
-  const state = location.state?.page
+  const state = location.state?.page;
   return (
     <>
       <Banner

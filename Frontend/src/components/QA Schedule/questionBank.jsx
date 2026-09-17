@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ArrowLeft, Download, Power } from "lucide-react";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const QuestionBank = () => {

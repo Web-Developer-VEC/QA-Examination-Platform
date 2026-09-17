@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, Pause, Power } from "lucide-react";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import Banner from "../Banner";
 
 const ScheduledExamHistory = () => {

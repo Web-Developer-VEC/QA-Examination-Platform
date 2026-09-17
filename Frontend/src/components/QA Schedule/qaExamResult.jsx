@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Banner from "../Banner";
 import { ArrowLeft, FileSpreadsheet, Power, FileText, Download } from "lucide-react";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const QAExamResults = () => {
